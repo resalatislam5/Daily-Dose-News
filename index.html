@@ -11,10 +11,10 @@
     <!-- tailwind-css -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
     <header>
         <!-- main-header --> 
-            <nav class="p-3 bg-gray-50 rounded border-gray-200 dark:bg-gray-800 dark:border-gray-700 border-b-2 py-5">
+            <nav class="p-3 bg-gray-100 rounded border-gray-200 dark:bg-gray-800 dark:border-gray-700 border-b-2 py-5">
                 <div class="container flex flex-wrap justify-between items-center mx-auto">
                 <a href="#" class="flex items-center text-red-700">
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Daily-Dose News</span>
@@ -40,7 +40,7 @@
             </nav>
         <!-- main-header-end -->
         <!-- sub-manu -->
-            <nav class="bg-gray-50 dark:bg-gray-700 py-5">
+            <nav class="bg-gray-100 dark:bg-gray-700 py-5">
                 <div class="py-3 px-4 mx-auto max-w-screen-2xl md:px-6">
                     <div class="flex items-center">
                         <ul id="ul-news-category" class="flex flex-row mt-0 mr-6 space-x-8 text-lg font-medium text-gray-500">
@@ -51,7 +51,15 @@
             </nav>
         <!-- sub-manu-end -->
     </header>
-
+    <main class="container mx-auto">
+         <!-- found for category Entertainment -->
+         <section class="bg-white p-5 rounded-xl mt-2">
+            <div id="found-news">
+                <h1 class="text-xl ">0 items found for category Entertainment</h1>
+            </div>
+         </section>
+         
+    </main>
 
     <!-- tailwind-config -->
     <script src="js/tailwind.config.js"></script>
