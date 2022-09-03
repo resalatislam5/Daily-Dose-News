@@ -42,20 +42,11 @@ const displayAllNews = async(category_id) =>{
     newsContainer.textContent = '';
     const DisplayTotalFound = document.getElementById('found-catagories');
     DisplayTotalFound.textContent = '0';
-    let totalFound = 0;
-    let totalview = [];
+    DisplayTotalFound.innerText = allNews.length;
+    console.log(allNews.length)
     allNews.forEach(category =>{
         const {author,thumbnail_url,details,title,total_view,rating,category_id} = category;
         const {name,img,published_date} = author;
-        totalFound = totalFound + Number(category_id);
-        DisplayTotalFound.innerText = totalFound;
-        if(0 < total_view){
-            totalview.push(total_view);
-        }
-        console.log(totalview)
-        if(Math.max(...totalview) > total_view){
-            console.log(total_view)
-        }
         const newsDiv = document.createElement('div');
         newsDiv.classList.add('py-5')
         newsDiv.innerHTML =`
