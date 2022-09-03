@@ -64,7 +64,7 @@ const displayAllNews = async(category_id) =>{
             <div class="h-full flex flex-col justify-between p-4 leading-normal">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${title}</h5>
                 <p class="mb-3 font-normal text-gray-700 py-5 dark:text-gray-400">${details.length > 300 ? details.slice(0,300)+'...':details}</p>
-                <div class ="grid grid-cols-4 gap-4">
+                <div class ="grid md:grid-cols-4 grid-cols-1 gap-4">
                 <!--autor-ditals-->
                     <div class ="flex">
                         <img class="p-1 mt-1 w-10 h-10 rounded-full ring-2 ring-gray-300 dark:ring-gray-500" src="${img ? img:'https://www.publicdomainpictures.net/pictures/280000/nahled/not-found-image-15383864787lu.jpg'}" alt="Bordered avatar">
