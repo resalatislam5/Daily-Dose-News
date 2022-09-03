@@ -18,7 +18,7 @@ const displayCategoriesName = async() =>{
         const li = document.createElement('li');
         li.classList.add('cursor-pointer')
         li.innerHTML = `
-        <button onclick ="displayAllNews('${category_id}')"  type="button" class="text-xl px-5 py-2.5 mr-2 mb-2">${category_name}</button>
+        <button onclick ="displayAllNews('${category_id}')"  type="button" class="text-sm md:text-lg md:px-5 md:py-2.5 md:mr-2 mb-2">${category_name}</button>
         `
         newsCategory.appendChild(li)
         displaySpiner(true)
