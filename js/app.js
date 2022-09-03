@@ -14,18 +14,20 @@ const displayCategoriesName = async() =>{
     const categories = await loadCategoriesName ();
     const newsCategory = document.getElementById('ul-news-category');
     categories.forEach(category =>{
-        const{category_name} = category;
+        const{category_name,category_id} = category;
         const li = document.createElement('li');
         li.classList.add('cursor-pointer')
-        li.innerText = `${category_name}`
+        li.innerHTML = `
+        <button onclick ="displayAllNews('${category_id}')"  type="button" class="text-xl px-5 py-2.5 mr-2 mb-2">${category_name}</button>
+        `
         newsCategory.appendChild(li)
     })
 }
 displayCategoriesName()
 //load all news
-const loadAllNews = async() =>{
+const loadAllNews = async(category_id) =>{
     try {
-        const res =await fetch(`https://openapi.programming-hero.com/api/news/category/01`);
+        const res =await fetch(`https://openapi.programming-hero.com/api/news/category/${category_id}`);
         const data =await res.json();
         return data.data;
       } catch (error) {
@@ -33,9 +35,10 @@ const loadAllNews = async() =>{
       }
     
 }
-const displayAllNews = async() =>{
-    const allNews =await loadAllNews ();
-    const newsContainer = document.getElementById('news-container')
+const displayAllNews = async(category_id) =>{
+    const allNews =await loadAllNews (category_id);
+    const newsContainer = document.getElementById('news-container');
+    newsContainer.textContent = '';
     let totalFound = 0;
     allNews.forEach(category =>{
         const {author,thumbnail_url,details,title,total_view,rating,category_id} = category;
@@ -135,4 +138,4 @@ const displaymodal = (thumbnail_url,title,name,published_date) =>{
     `
     modal.toggle()
 }
-displayAllNews()
+// displayAllNews()
