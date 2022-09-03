@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily-Dose News</title>
+    <!-- flowbite  -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <!-- tailwind-css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header>
+        <!-- main-header --> 
+            <nav class="p-3 bg-gray-100 rounded border-gray-200 dark:bg-gray-800 dark:border-gray-700 border-b-2 py-5">
+                <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="#" class="flex items-center text-red-700">
+                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Daily-Dose News</span>
+                </a>
+                <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:focus:ring-gray-500" aria-controls="navbar-solid-bg" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+                    <ul class="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700 items-center text-lg">
+                    <li>
+                        <a href="index.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">News</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+                    </li>
+                    <li>
+                        <img src="images/Avatar.png" class="mr-3 h-6 sm:h-10" alt="Flowbite Logo">
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        <!-- main-header-end -->
+    <main class="container mx-auto">
+        <!-- question-1-start -->
+         <div class="py-5">
+            <h1 class="text-2xl">1.Difference between var let const</h1>
+           <p class="text-xl">In JavaScript, users can declare a variable using 3 keywords that are var, let, and const. In this article, we will see the differences between the var, let, and const keywords. </p> 
+           <p class="text-xl">var keyword in JavaScript: The var is the oldest keyword to declare a variable in JavaScript. 
+            Scope: Global scoped or function scoped. The scope of the var keyword is the global or function scope. It means variables defined outside the function can be accessed globally, and variables defined inside a particular function can be accessed within the function. </p> 
+           <p class="text-xl">let keyword in JavaScript: The let keyword is an improved version of the var keyword. 
+            Scope: block scoped: The scope of a let variable is only block scoped. It can’t be accessible outside the particular block ({block}). Let’s see the below example.</p> 
+           <p class="text-xl">const keyword in JavaScript: The const keyword has all the properties that are the same as the let keyword, except the user cannot update it.
+            Scope: block scoped: When users declare a const variable, they need to initialize it, otherwise, it returns an error. The user cannot update the const variable once it is declared. </p> 
+         </div>
+        <!-- question-1-end -->
+        <!-- question-2-start -->
+         <div class="py-5">
+            <h1 class="text-2xl">2.Difference between Regular Functions and Arrow Functions</h1>
+           <p class="text-xl">Unlike regular functions, arrow functions do not have their own this . The value of this inside an arrow function remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest non-arrow parent function.</p> 
+         </div>
+        <!-- question-2-end -->
+        <!-- question-3-start -->
+         <div class="py-5">
+            <h1 class="text-2xl">3.Difference between forEach map filter find</h1>
+           <p class="text-xl">.forEach(), is used to execute the same code on every element in an array but does not change the array and it returns undefined.</p> 
+           <p class="text-xl">
+            .map() executes the same code on every element in an array and returns a new array with the updated elements.</p> 
+           <p class="text-xl">
+            .filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria.</p> 
+           <p class="text-xl">The find() method returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.</p> 
+         </div>
+        <!-- question-3-end -->
+        <!-- question-4-start -->
+         <div class="py-5">
+            <h1 class="text-2xl">4.what is template string in javascript</h1>
+           <p class="text-xl">Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements.</p> 
+           
+         </div>
+        <!-- question-4-end -->
+    </main>
+    <!-- footer -->
+    <footer class="bg-white">
+        <p class="text-center py-10 text-xl">Copyright 2021 Daily-Dose News</p>
+    </footer>
+    <!-- tailwind-config -->
+    <script src="js/tailwind.config.js"></script>
+</body>
+</html>
