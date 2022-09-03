@@ -36,6 +36,11 @@ const loadAllNews = async(category_id) =>{
       }
     
 }
+function compareAge(a, b) {
+
+    return b.total_view - a.total_view ;
+}
+
 const displayAllNews = async(category_id) =>{
     const allNews =await loadAllNews (category_id);
     const newsContainer = document.getElementById('news-container');
@@ -43,8 +48,7 @@ const displayAllNews = async(category_id) =>{
     const DisplayTotalFound = document.getElementById('found-catagories');
     DisplayTotalFound.textContent = '0';
     DisplayTotalFound.innerText = allNews.length;
-    console.log(allNews.length)
-    allNews.forEach(category =>{
+    allNews.sort(compareAge).forEach(category =>{
         const {author,thumbnail_url,details,title,total_view,rating,category_id} = category;
         const {name,img,published_date} = author;
         const newsDiv = document.createElement('div');
