@@ -21,6 +21,7 @@ const displayCategoriesName = async() =>{
         <button onclick ="displayAllNews('${category_id}')"  type="button" class="text-xl px-5 py-2.5 mr-2 mb-2">${category_name}</button>
         `
         newsCategory.appendChild(li)
+        displaySpiner(true)
     })
 }
 displayCategoriesName()
@@ -99,6 +100,7 @@ const displayAllNews = async(category_id) =>{
         </div>
         `;
         newsContainer.appendChild(newsDiv)
+        displaySpiner(false)
     })
 }
 
@@ -146,5 +148,13 @@ const displaymodal = (thumbnail_url,title,name,published_date) =>{
                     </div>
     `
     modal.toggle()
+}
+const displaySpiner =spiner=>{
+    const spinerContainer = document.getElementById('spiner-container');
+    if(spiner){
+        spinerContainer.classList.remove('hidden')
+    }else{
+        spinerContainer.classList.add('hidden')
+    }
 }
 displayAllNews('07')
